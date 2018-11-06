@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DNTP</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style05.css"/>
+        <script>
+            var arr = [3,5457,5,867,86,234,2];
+
+            // sort默认是对字符编码 从小到大
+
+            arr.sort(function (a, b) {
+                return a-b;
+            });
+            console.log(arr);
+        </script>
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+		  <div class="container">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">Admin</a>
+		    </div>
+		
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="index.html"><i class="glyphicon glyphicon-home iconspace"></i>后台首页</a></li>
+		        <li><a href="userlist.html"><i class="glyphicon glyphicon-user iconspace"></i>用户管理</a></li>
+		        <li><a href="concact-list.html"><i class="glyphicon glyphicon-list iconspace"></i>内容管理</a></li>
+		        <li><a href="target-list.html"><i class="glyphicon glyphicon-tag iconspace"></i>标签管理</a></li>
+		      </ul>
+		      
+		      <ul class="nav navbar-nav navbar-right">
+
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">admin <span class="caret"></span></a>
+		          <ul class="dropdown-menu" role="menu">
+		            <li><a href="#"><i class="glyphicon glyphicon-home siconspace"></i>前台首页</a></li>
+		            <li><a href="#"><i class="glyphicon glyphicon-user siconspace"></i>个人主页</a></li>
+		            <li><a href="#"><i class="glyphicon glyphicon-cog siconspace"></i>个人设置</a></li>
+		            <li><a href="#"><i class="glyphicon glyphicon-credit-card siconspace"></i>账户中心</a></li>
+		            <li><a href="#"><i class="glyphicon glyphicon-heart siconspace"></i>我的收藏</a></li>
+		          </ul>
+		        <li><a href="#"><i class="glyphicon glyphicon-off iconspace"></i>&nbsp;退出</a></li>
+		        </li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+		<div class="container">
+			<div class="alert alert-danger alert-dismissible" role="alert">
+			  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			  <h3 class="alertTitle"><strong>网站有漏洞，急需修复！</strong></h3>
+			  <p class="alertContent">Better check yourself, you're not looking too good.</p>
+			  <button type="button" class="btn btn-danger">立即修复</button>
+			  <button type="button" class="btn btn-default">稍后处理</button>
+			</div>
+		</div>
+		<div class="container">
+			<div class="col-lg-6 panell col-md-6 col-sm-6 tb-left">
+			  <div class="panel panel-default ">
+			  <div class="panel-heading">网站数据统计</div>
+			  <div class="panel-body">
+			    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>统计项目</th>
+          <th>今日</th>
+          <th>昨日</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">注册会员</th>
+          <td>54541</td>
+          <td>43413</td>
+        </tr>
+        <tr>
+          <th scope="row">登录会员</th>
+          <td>24145</td>
+          <td>45524</td>
+        </tr>
+        <tr>
+          <th scope="row">今日发帖</th>
+          <td>54864</td>
+          <td>75643</td>
+        </tr>
+        <tr>
+          <th scope="row">转载次数</th>
+          <td>5964651</td>
+          <td>44564564</td>
+        </tr>
+      </tbody>
+    </table>
+			  </div>
+			</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 tb-right panelr">
+			  <div class="panel panel-default ">
+			  <div class="panel-heading">网站热帖的</div>
+			  <div class="panel-body">
+				<table class="table table-condensed">
+			      <thead>
+			        <tr>
+			          <td><a href="#"><i class="glyphicon glyphicon-list-alt"></i>武汉一别墅楼盘业主疯狂违建(图)</a></td>
+			          <td><span>2018/4/22</span></td>
+			        </tr>
+			      </thead>
+			      <tbody>
+			        <tr>
+			          <td scope="row"><a href="#"><i class="glyphicon glyphicon-list-alt"></i>惊险！湖北母子拍合影，摔下6米高桥</a></td>
+			          <td><span>2018/4/22</span></td>
+			        </tr>
+					<tr>
+			          <td scope="row"><a href="#"><i class="glyphicon glyphicon-list-alt"></i>汉马本周末举行，交警方案出炉</a></td>
+			          <td><span>2018/4/22</span></td>
+			        </tr>
+			        <tr>
+			          <td scope="row"><a href="#"><i class="glyphicon glyphicon-list-alt"></i>湖北融资担保公司6年税减三成多，行业面临洗牌</a></td>
+			          <td><span>2018/4/22</span></td>
+			        </tr>
+			        <tr>
+			          <td scope="row"><a href="#"><i class="glyphicon glyphicon-list-alt"></i>湖北省公布2018年新闻发言人名录、联系方式</a></td>
+			          <td><span>2018/4/22</span></td>
+			        </tr>
+			        <tr>
+			          <td scope="row"><a href="#"><i class="glyphicon glyphicon-list-alt"></i>光谷开办企业时间压缩至最短8.5个工作日</a></td>
+			          <td><span>2018/4/22</span></td>
+			        </tr>
+			      </tbody>
+			    </table>
+			  </div>
+			</div>
+			</div>
+			
+			<div class="col-lg-6 col-md-6 col-sm-6 tb-left panelr">
+			  	<div class="panel panel-default plchart">
+					<div class="panel-heading">今日发帖</div>
+					<div class="panel-body">
+						<canvas id="canvas"></canvas>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-lg-6 col-md-6 col-sm-6 tb-right panelr">
+			  	<div class="panel panel-default">
+					<div class="panel-heading">服务器状态</div>
+					<div class="panel-body">
+						<p>内存使用率:40%</p>
+						<div class="progress">
+						<div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+						  </div>
+						</div>
+						<p>数据库使用率:20%</p>
+						<div class="progress">
+						  <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+						  </div>
+						</div>
+						<p>硬盘使用率:60%</p>
+						<div class="progress">
+						  <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+						  </div>
+						</div>
+						<p>CPU使用率:80%</p>
+						<div class="progress">
+						  <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container">
+		  	<div class="panel panel-default">
+				<div class="panel-heading">团队留言板</div>
+				<div class="panel-body">
+					<div class="col-lg-7 row dia_l">
+						<div class="well well-lg">
+							<div class="diatext"><i class="glyphicon glyphicon-send"></i></div>
+							<div class="diatext">
+								<h3>Harry</h3>
+								<p>后台有一个Bug，记得修复一下。</p>
+							</div>
+						</div>
+						<div class="well well-lg">
+							<div class="diatext"><i class="glyphicon glyphicon-send"></i></div>
+							<div class="diatext">
+								<h3>Harry</h3>
+								<p>后台有一个Bug，记得修复一下。</p>
+							</div>
+						</div>
+						<div class="well well-lg">
+							<div class="diatext"><i class="glyphicon glyphicon-send"></i></div>
+							<div class="diatext">
+								<h3>Harry</h3>
+								<p>后台有一个Bug，记得修复一下。</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-5 talk">
+						<form action="#" method="get" class="input-group">
+							<h4>请输入留言内容</h4>
+							<p><textarea class="form-control" rows="6" cols="73"></textarea></p>								
+							<button class="btn btn-default btn-group-lg">发布留言</button>
+						</form>
+						<div class="panel panel-default talk_top">
+							<div class="panel-heading">团队开发手册</div>
+							<div class="panel-body">
+								<ul class="list-group">
+								  <li class="list-group-item">站长：<i class="glyphicon glyphicon-phone"></i> 180xxxx9936</li>
+								  <li class="list-group-item">站长：<i class="glyphicon glyphicon-phone"></i> 180xxxx9936</li>
+								  <li class="list-group-item">站长：<i class="glyphicon glyphicon-phone"></i> 180xxxx9936</li>
+								  <li class="list-group-item">站长：<i class="glyphicon glyphicon-phone"></i> 180xxxx9936 <i class="glyphicon glyphicon-phone-alt fontspace"></i> 027-465213512</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container-fluid">
+			<div class="copy">
+				<p>Copyright &copy; 版权所有，请勿侵权！！！ 2016-2018   粤ICP备 21321641561</p>
+			</div>
+		</div>
+		
+		<script src="js/jquery-1.11.1.js" type="text/javascript"></script>
+		<script src="js/bootstrap.js" type="text/javascript"></script>
+		<script src="js/Chart.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
