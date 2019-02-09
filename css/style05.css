@@ -23,8 +23,8 @@ i{margin-right: 10px; }
 
 .talk h4{font-size: 14px; font-weight: bold;}
 
-.tb-left{padding-left: 0;}
-.tb-right{padding-right: 0;}
+/* .tb-left{padding-left: 0;}
+.tb-right{padding-right: 0;} */
 
 .fontspace {display: inline-block; margin: 0 15px;}
 .talk_top {margin-top: 20px;}
