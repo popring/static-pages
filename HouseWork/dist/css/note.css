@@ -1,0 +1,45 @@
+body {
+  background: #ffb000
+}
+#app {
+  width: 800px;
+  margin: 0 auto;
+  color: #fff
+}
+#app > h3 > a {
+  color: #fff;
+  text-decoration: none;
+  padding: 3px 0;
+  transition: all .5s
+}
+#app > h3 > a:hover {
+  border-bottom: 3px solid #fff
+}
+#app .edit #com {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #333;
+  box-sizing: border-box
+}
+#app .comments ul {
+  padding: 0
+}
+#app .comments ul li {
+  box-sizing: border-box;
+  list-style: none;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin: 10px 0
+}
+#app .comments ul li .username a {
+  color: #333;
+  text-decoration: none;
+  transition: all .5s
+}
+#app .comments ul li .username a:hover {
+  color: #ffb000
+}
+#app .comments ul li .comment-content {
+  color: #6f68e1
+}

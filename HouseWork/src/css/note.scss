@@ -1,0 +1,59 @@
+body {
+  background: #FFB000;
+}
+
+#app {
+  width: 800px;
+  margin: 0 auto;
+  color: #fff;
+
+  >h3>a {
+    color: #fff;
+    text-decoration: none;
+    padding: 3px 0;
+    transition: all .5s;
+    &:hover {
+      border-bottom: 3px solid #fff;
+    }
+  }
+
+  .edit {
+    #com {
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #333;
+      box-sizing: border-box;
+    }
+  }
+
+  .comments {
+    ul {
+      padding: 0;
+
+      li {
+        box-sizing: border-box;
+        list-style: none;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 5px 20px;
+        margin: 10px 0;
+
+        .username {
+          a {
+            color: #333;
+            text-decoration: none;
+            transition: all .5s;
+
+            &:hover {
+              color: #FFB000;
+            }
+          }
+        }
+
+        .comment-content {
+          color: #6F68E1
+        }
+      }
+    }
+  }
+}

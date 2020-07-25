@@ -1,0 +1,50 @@
+.iconspace{display: inline-block; padding: 0 7px; }
+.siconspace{padding: 0 5px;}
+
+.alertTitle{margin-top: 10px;}
+.alertContent{padding-bottom: 10px;}
+
+
+/*@media only screen and min-width: 768px {*/
+	/*.panell{padding-left: 0px;}*/
+	/*.panelr{padding-right: 0px;}*/
+/*}*/
+
+/*@media only screen and max-width: 767px {*/
+	/*.panell{padding-left: 0px;}*/
+	/*.panelr{padding-right: 0px;}*/
+/*}*/
+
+
+i{margin-right: 10px; }
+.talk i{margin-right: 0;}
+
+.diatext{display: table-cell;}
+
+.talk h4{font-size: 14px; font-weight: bold;}
+
+/* .tb-left{padding-left: 0;}
+.tb-right{padding-right: 0;} */
+
+.fontspace {display: inline-block; margin: 0 15px;}
+.talk_top {margin-top: 20px;}
+
+.copy {padding: 10px 0; }
+.copy p{text-align: center;}
+
+.page-h {margin-top: 0;}
+.user-title {font-size: 18px;}
+
+.tab-content .tab-pane+.tab-bor{
+	border: 1px solid #ddd;
+	border-top: 0px;
+	padding: 10px;
+}
+
+.show-tags{
+	padding: 0 15px;
+}
+
+.show-tags div{
+	margin-right: 10px;
+}
