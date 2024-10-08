@@ -1,0 +1,775 @@
+/*transform: scale(1.05);*/
+/*box-shadow: 2px 8px 5px rgba(0,0,0,.3);*/
+/*初始化代码*/
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #0A0A0C;
+    /* 临时代码 */
+    height: 3000px;
+    color: #c9aa71;
+    font-size: 12px;
+    font-family: microsoft yahei, Helvetica, tahoma, simsun, sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    transition: .8s;
+}
+
+a, button {
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+
+/* hebrew */
+@font-face {
+    font-family: 'Varela Round';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Varela Round Regular'), local('VarelaRound-Regular'), url(https://fonts.gstatic.com/s/varelaround/v9/w8gdH283Tvk__Lua32TysjIfpcuPP9g.woff2) format('woff2');
+    unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* vietnamese */
+@font-face {
+    font-family: 'Varela Round';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Varela Round Regular'), local('VarelaRound-Regular'), url(https://fonts.gstatic.com/s/varelaround/v9/w8gdH283Tvk__Lua32TysjIfqMuPP9g.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Varela Round';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Varela Round Regular'), local('VarelaRound-Regular'), url(https://fonts.gstatic.com/s/varelaround/v9/w8gdH283Tvk__Lua32TysjIfqcuPP9g.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Varela Round';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Varela Round Regular'), local('VarelaRound-Regular'), url(https://fonts.gstatic.com/s/varelaround/v9/w8gdH283Tvk__Lua32TysjIfp8uP.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+
+
+/*清除浮动*/
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+.header, .slide-map, .mod-news, .mod-trend, .mod-light, .footer {
+    transition: 0.8s!important;
+    opacity: 0;
+}
+
+/*---------------------header---------------------*/
+.header {
+    width: 100%;
+    height: 64px;
+    background-color: #121212;
+    border-bottom: 2px solid #262626;
+    z-index: 100;
+}
+
+.logo {
+    float: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.nav {
+    margin: 0 auto;
+    /*overflow: hidden;*/
+    width: 680px;
+}
+
+.logo img {
+    height: 64px;
+}
+
+.nav-logo {
+    float: left;
+}
+
+.nav-link {
+    float: left;
+}
+
+.nav-link a {
+    float: left;
+    color: #c9aa71;
+    font-size: 14px;
+    text-align: center;
+    padding: 11px 0;
+    margin: 0 15px;
+}
+
+.nav-link a:hover {
+    color: #fff;
+    border-bottom: 2px solid #c9aa71;
+}
+
+/*导航栏选中*/
+.nav-link a.active {
+    color: #fff;
+    border-bottom: 2px solid #c9aa71;
+}
+
+/*.nav-regions {*/
+    /*!*display: none;*!*/
+    /*display: block;*/
+    /*position: absolute;*/
+    /*top: 68px;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*height: 50px;*/
+    /*background-color: red;*/
+/*}*/
+
+/*nav-regions li {*/
+    /*display: block;*/
+    /*float: left;*/
+    /*margin-right: 10px;*/
+
+ /*}*/
+/*---------------------slidemap---------------------*/
+.slide-map {
+    width: 100%;
+    height: 600px;
+    background-color: black;
+    z-index: 60;
+    position: relative;
+    /*overflow: hidden;*/
+}
+#source {
+    display: none;
+}
+#output {
+    font-size: 66px;
+    color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    font-family: Varela Round;
+    letter-spacing: 10px;
+    line-height: 1.5;
+    transition: .8s;
+}
+#slide-vid {
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    left: 0;
+    top: 0;
+    opacity: .9;
+    z-index: -1;
+    transition: .8s;
+}
+
+/*---------------------content---------------------*/
+
+.mod-news {
+    position: relative;
+    margin: 10px auto;
+}
+
+.mod-news-bg {
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    opacity: .15;
+    right: 0;
+    left: 0;
+}
+
+.mod-news .mod-news-bg {
+    background: url("../upload/mod-news-bg.jpg") no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    bottom: 40%;
+}
+
+/*mod总标题标签*/
+.mod-title {
+    margin: 30px 0;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/*mod icon*/
+.mod-icon {
+    max-width: 32px;
+    max-height: 32px;
+}
+
+.mod-title-line {
+    position: relative;
+
+}
+
+/*line公共样式*/
+.mod-line {
+    display: block;
+    position: absolute;
+    top: 24px;
+    width: 350px;
+    height: 2px;
+}
+
+/*mod主标题*/
+.mod-line-title {
+    font-size: 24px;
+    line-height: 2;
+    letter-spacing: 5px;
+    color: #c4b998;
+}
+
+/*左边标题线*/
+.mod-line-l {
+    left: 50%;
+    margin-left: -450px;
+    background: linear-gradient(to left, #393223, #1C1915);
+}
+
+/*右边标题线*/
+.mod-line-r {
+    right: 50%;
+    margin-right: -450px;
+    background: linear-gradient(to right, #393223, #1C1915);
+}
+
+/*公共模块 方格*/
+.mod-grid {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.mod-grid li {
+    margin: 6px;
+    float: left;
+    box-shadow: 0 0 16px 14px rgba(0, 0, 0, .4);
+    position: relative;
+    border: 1px solid #251E17;
+    transition: .5s;
+}
+
+/*格子hover属性*/
+.mod-grid li:hover {
+    border: 1px solid #927345;
+    transform: scale(1.1);
+    z-index: 15 !important;
+}
+
+.mod-grid li:hover .grid-mid-bottom, .mod-grid li:hover .grid-large-bottom {
+    bottom: 50px;
+}
+
+.mod-grid li:hover .grid-more {
+    bottom: 0;
+}
+
+/*格子普通属性*/
+.mod-grid .grid-mid {
+    float: left;
+    width: 300px;
+    height: 338px;
+    overflow: hidden;
+}
+
+.mod-grid .grid-large {
+    float: right;
+    width: 630px;
+    height: 690px;
+    overflow: hidden;
+}
+
+.grid-mid-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 24%;
+    background-color: #101217;
+    border-top: 1px solid #7E633B;
+    transition: .5s ease;
+    /*
+    暗色 251E17
+    亮色 7E633B
+    */
+}
+
+.grid-large-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    background-color: #101217;
+    border-top: 1px solid #7E633B;
+    transition: .5s ease;
+}
+
+.grid-icon-small {
+    width: 42px;
+    height: 42px;
+    border: 2px solid #4E4019;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: -22px;
+}
+
+.grid-icon-large {
+    width: 62px;
+    height: 62px;
+    border: 2px solid #4E4019;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: -31px;
+}
+
+/*-------------------------icon-------------------------*/
+.icon-hrea {
+    background: url("../images/content_type_icon_champion__3nwJQ.png") no-repeat center center;
+    background-size: auto 21px;
+    background-color: #101217;
+}
+
+.icon-story {
+    background: url("../images/content-type-icon-story.png") no-repeat center center;
+    background-size: auto 15px;
+    background-color: #101217;
+}
+
+.icon-brush {
+    background: url("../images/brush.png") no-repeat center center;
+    background-size: auto 15px;
+    background-color: #101217;
+}
+
+.icon-natural {
+    background: url("../images/natural.png") no-repeat center center;
+    background-size: auto 15px;
+    background-color: #101217;
+}
+
+/*--------------------------------------------------------*/
+
+.mod-grid h3, .mod-grid h1 {
+    text-align: center;
+    padding-top: 5px;
+    font-weight: normal;
+}
+
+.mod-grid h3 {
+    font-size: 14px;
+    color: #937341;
+}
+
+.mod-grid h1 {
+    font-size: 16px;
+    color: #c4b998;
+}
+
+/*单个小方格*/
+.grid-mid a, .grid-large a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/*专属属性*/
+.mod-grid .jugger {
+    background: url("../upload/news/Juggernaut.jpg") no-repeat;
+    background-size: auto 100%;
+    background-position: 90% 0;
+}
+
+.mod-grid .shen {
+    background: url("../upload/news/shen.jpg") no-repeat;
+    background-size: auto 100%;
+    background-position: 90% 0;
+}
+
+.mod-grid .karma {
+    background: url("../upload/news/karma.jpg") no-repeat;
+    background-size: auto 100%;
+    background-position: 90% 0;
+}
+
+.mod-grid .shadow {
+    background: url("../upload/news/shadow.jpg") no-repeat;
+    background-size: auto 100%;
+    background-position: 90% 0;
+}
+
+.mod-grid .akali {
+    background: url("../upload/news/akali-colortext-bg.jpg") no-repeat;
+    background-size: auto 100%;
+    background-position: 47% 0;
+}
+
+.grid-more {
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    height: 48px;
+    background-color: #14181D;
+    color: #937341;
+    text-align: center;
+    line-height: 48px;
+    transition: .5s ease;
+    border: 1px solid #3F3527;
+}
+
+/*---------------------内容动向---------------------*/
+.mod-trend {
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+.mod-trend .mod-news-bg {
+    position: absolute;
+    background: url("../upload/trend/bilgewater_splash.jpg") no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    bottom: 40%;
+    z-index: -1;
+}
+
+.mod-trend .mod-icon {
+    margin-left: -10px;
+}
+
+/*格子介绍图*/
+.mod-trend .flyout {
+    background: url("../upload/trend/from-the-ashes-bg-image.jpg") no-repeat;
+    background-size: auto 100%;
+    background-position: 27% 0;
+}
+
+.mod-trend .ryze {
+    background: url("../upload/trend/image (5).jpg") no-repeat;
+    background-size: auto 100%;
+    background-position: 80% 0;
+}
+
+.mod-trend .brand {
+    background: url("../upload/trend/image (4).jpg") no-repeat;
+    background-size: auto 100%;
+    background-position: 80% 0;
+}
+
+.mod-trend .ryze-ca {
+    background: url("../upload/trend/ryze-cover.jpg") no-repeat;
+    background-size: auto 100%;
+    background-position: 80% 0;
+}
+
+.mod-trend .innmap {
+    background: url("../upload/trend/map-teaser-bg.jpg") no-repeat;
+    background-size: auto 100%;
+    background-position: 50% 0;
+}
+
+/*---------------------------------亮点英雄---------------------------------*/
+.mod-light {
+    position: relative;
+    width: 1300px;
+    height: 880px;
+    margin: 50px auto;
+    border-bottom: 1px solid #373121;
+    z-index: 96;
+}
+
+.mod-light .line {
+
+}
+
+/* 边框线 */
+.line div {
+    position: absolute;
+    /*background-color: #fff;*/
+    background-color: #373121;
+}
+
+.line-ttl {
+    top: 60px;
+    left: 0;
+    width: 440px;
+    height: 1px;
+}
+
+.line-ttr {
+    top: 60px;
+    right: 0;
+    width: 440px;
+    height: 1px;
+}
+
+.line-lt {
+    top: 60px;
+    left: 0;
+    width: 1px;
+    height: 250px;
+}
+
+.line-rt {
+    top: 60px;
+    right: 0;
+    width: 1px;
+    height: 250px;
+}
+
+.line-lb {
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 250px;
+}
+
+.line-rb {
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    height: 250px;
+}
+
+.light-slide {
+    position: relative;
+    width: 1152px;
+    height: 600px;
+    background-color: #0A0A0C;
+    margin: 0 auto;
+    margin-top: -10px;
+}
+
+.light-slide > ul {
+    position: absolute;
+    width: 10000px;
+    height: 100%;
+    left: 0;
+    background-color: #0A0A0C;
+    transition: .5s;
+}
+
+.light-slide-con > li {
+    position: relative;
+    float: left;
+    margin-right: 130px;
+    transition: .3s;
+}
+
+
+
+.light-slide-con > li.active {
+    background-color: #fff;
+    transform: scale(1.05);
+}
+
+/*剑圣*/
+/*.light-slide .masteryi {*/
+    /*width: 1152px;*/
+    /*height: 100%;*/
+    /*background: url("../upload/hero/Masteryi_0.jpg") no-repeat;*/
+    /*background-size: 100%;*/
+/*}*/
+.light-slide-con>li:nth-child(1) {
+    width: 1152px;
+    height: 100%;
+    background: url("../upload/hero/Masteryi_0.jpg") no-repeat;
+    background-size: 100%;
+}
+.light-slide-con>li:nth-child(2){
+    width: 1152px;
+    height: 100%;
+    background: url("../upload/hero/Akali_0.jpg") no-repeat!important ;
+    background-position: 48.9063% 15%;;
+}
+
+.light-slide-con>li:nth-child(3){
+    width: 1152px;
+    height: 100%;
+    background: url("../upload/hero/Zed_0.jpg") no-repeat!important;
+    background-size: 100%;
+}
+
+.light-slide-con>li:nth-child(4){
+    width: 1152px;
+    height: 100%;
+    background: url("../upload/hero/Karma_0.jpg") no-repeat!important;
+    background-size: 100%;
+}
+
+.light-slide-con>li:nth-child(5){
+    width: 1152px;
+    height: 100%;
+    background: url("../upload/hero/Shen_0.jpg") no-repeat!important;
+    background-size: 100%;
+}
+
+.light-info {
+    position: absolute;
+    bottom: -50px;
+    left: 0 !important;
+    right: 0;
+    margin: 0 auto;
+    width: 980px;
+    height: 100px;
+    padding: 20px 0;
+    background-color: #131315;
+    border: 1px solid #373121;
+}
+
+.light-info-con {
+    margin: 0 auto;
+    width: 900px;
+    height: 100px;
+    /*background-color: #fff;*/
+    border: 1px solid #c4b998;
+}
+
+.light-info-con li {
+    float: left;
+    border-right: 1px solid #c4b998;
+    color: #d3c7aa;
+}
+
+.light-info-con li:nth-child(1) {
+    width: 20%;
+    height: calc(100% - 30px);
+    padding: 15px 0;
+}
+
+.light-info-con img {
+    display: block;
+    margin: 0 auto;
+    height: 68px;
+}
+
+.light-info-name {
+    width: 30%;
+    height: 100%;
+    font-size: 38px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 2.5;
+}
+
+.light-info-this {
+    width: 22%;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.light-info-posi {
+    display: block;
+    width: 100%;
+    height: 50%;
+    border-bottom: 1px solid #c4b998;
+}
+
+.light-info-area {
+    display: block;
+    height: 50%;
+}
+
+.light-info-more {
+    width: calc(27% - 1px);
+    float: right;
+    border-right: 0 !important;
+    color: #B59758 !important;
+    text-align: center;
+    font-size: 20px;
+    line-height: 100px;
+}
+
+/*箭头*/
+.arrow {
+    font-size: 30px;
+    color: #A58749;
+}
+
+.arrow .arr-left, .arrow .arr-right {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    border: 2px solid #BA9C57;
+    border-radius: 50%;
+    line-height: 48px;
+    width: 50px;
+    height: 50px;
+    vertical-align: bottom;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.arrow .arr-left {
+    left: -24px;
+}
+
+.arrow .arr-left:hover {
+    width: 70px;
+    height: 70px;
+    line-height: 68px;
+    left: -34px;
+    top: calc(50% - 10px);
+}
+
+.arrow .arr-right {
+    right: -24px;
+}
+
+.arrow .arr-right:hover {
+    width: 70px;
+    height: 70px;
+    line-height: 68px;
+    right: -34px;
+    top: calc(50% - 10px);
+}
+
+
+/*--------------------------------------------------------------------------*/
+
+/*--------------------------------------版权---------------------------------*/
+.footer {
+    width: 100%;
+    height: 230px;
+    border-top: 1px solid #937341;
+}
+.copy-img {
+    display: block;
+    margin: 30px auto;
+    width: 330px;
+    height: 66px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.footer p {
+    text-align: center;
+    line-height: 1.5;
+}

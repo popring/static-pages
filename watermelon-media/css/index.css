@@ -1,0 +1,300 @@
+/*初始化默认样式*/
+* {
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+li {
+	list-style: none;
+}
+em,
+i {
+	font-style: normal;
+}
+body {
+	background-color: #F4F4F4;
+}
+.w {
+	width: 980px;
+	margin: 0 auto;
+}
+
+.clearfix:before,.clearfix:after { 
+  content:"";
+  display:table; 
+}
+.clearfix:after {
+ clear:both;
+}
+.clearfix {
+  *zoom:1;
+}
+
+/* top_nav start*/
+.top_nav {
+	width: 100%;
+	height: 30px;
+	background-color: #EEEEEE;
+	border-bottom: 1px solid #D8D8D8;
+}
+.top_nav ul {
+	float: right;
+}
+.top_nav li {
+	height: 30px;
+	line-height: 30px;
+	list-style: initial;
+}
+.top_nav li a {
+	color: #555555;
+}
+/* top_nav end*/
+
+/*header start*/
+.header {
+	height: 80px;
+	/*background-color: pink;*/
+}
+.logo {
+	float: left;
+	margin-top: 13px;
+}
+.logo a {
+	display: block;
+	height: 47px;
+	line-height: 47px;
+	background: url(../images/logo1.png) no-repeat;
+	font-size: 18px;
+	color: #555555;
+	padding-left: 54px;
+}
+.search {
+	float: right;
+	margin-top: 30px;
+	position: relative;
+	margin-right: 10px;
+}
+.search input {
+	width: 252px;
+	height: 28px;
+	border: 1px solid #DDDDDD;
+	line-height: 16px;
+}
+.search button {
+	position: absolute;
+	width: 14px;
+	height: 13px;
+	top: 8px;
+	right: 8px;
+	border: none;
+	background: url(../images/search.png) no-repeat;
+}
+/*header end*/
+
+/* nav start */
+.nav {
+	margin-top: 15px;
+	height: 35px;
+}
+.nav li {
+	float: left;
+	margin-right: 1px;
+}
+.nav li a {
+	padding: 11px 44px;
+	background-color: #E0E0E0;
+	color: #000;
+	font-size: 14px;
+	line-height: 22px;
+}
+.nav li a:hover {
+	background-color: #19B4EA;
+	color: #fff;
+}
+.nav .first {
+	padding: 11px 40px;
+	border-radius: 8px 0 0 8px;
+}
+.nav .last {
+	margin-right: 0;
+	border-radius:0 8px 8px 0 ;
+}
+/* nav end */
+
+/*banner start*/
+.banner {
+	margin-top: 10px;
+	height: 350px;
+	position: relative;
+}
+.banner img {
+	width: 980px;
+	height: 350px;
+}
+.ban-p {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -20px;
+}
+.ban-p li{
+	float: left;
+	width: 12px;
+	height: 12px;
+	margin: 0 4px;
+	border-radius: 50%;
+	background-color: #B0B0B0;
+
+}
+.ban-p .active {
+	background-color: #19B4EA;
+}
+.arrow-l,
+.arrow-r {
+	position: absolute;
+	display: block;
+	width: 40px;
+	height: 100px;
+	background-color: rgba(0,0,0, .2);
+	color: #fff;
+	text-align: center;
+	line-height: 100px;
+	top: 50%;
+	margin-top: -50px;
+	border-radius: 5px;
+}
+.arrow-l:hover,
+.arrow-r:hover {
+	background-color: rgba(0,0,0, .5);
+}
+.arrow-l {
+	left: 0;
+}
+.arrow-r {
+	right: 0;
+}
+/*banner end*/
+
+/* show start */
+.show {
+	
+}
+.show h3 {
+	padding: 10px 0;
+	line-height: 24px;
+	color: #7A7F8F;
+	border-bottom: 1px solid #CBD1D3;
+	margin-bottom: 10px;
+}
+.show-l {
+	float: left;
+	width: 600px;
+	/*background-color: pink;*/
+}
+.show-l li {
+	float: left;
+	margin-right: 20px;
+}
+.show-l li p {
+	text-align: center;
+}
+.show-l .last {
+	margin-right: 0;
+}
+.show-r {
+	margin-left: 20px;
+	float: right;
+	width: 360px;
+}
+.show-r li {
+	height: 38px;
+	line-height: 38px;
+	border-bottom: 1px dashed #D1D1D1;
+	font-size: 12px;
+}
+.show-r em {
+	color: red;
+	margin-right: 5px;
+}
+.show-r li a {
+	color: #333;
+}
+.show-r li span {
+	float: right;
+}
+/* show end*/
+
+/*contact*/
+.contact {
+	margin-top: 20px;
+}
+.contact h3 {
+	padding: 10px 0;
+	line-height: 24px;
+	color: #7A7F8F;
+	border-bottom: 1px solid #CBD1D3;
+	margin-bottom: 10px;
+}
+.jianjie {
+	float: left;
+	width: 618px;
+	height: 260px;
+}
+.jianjie img {
+	width: 150px;
+	float: left;
+}
+.jianjie-con {
+	float: right;
+	width: 450px;
+}
+.jianjie-con a{
+	color:  #CD0000;
+	text-decoration: underline;
+}
+.jianjie h4 {
+	color: #313131;
+	line-height: 41px;
+}
+.jianjie p {
+	width: 450px;
+	font-size: 14px;
+	color: #999;
+}
+.lianxi {
+	float: right;
+}
+.lianxi li {
+	padding-left: 40px;
+	line-height: 30px;
+	font-size: 14px;
+	color: #999;
+	margin: 10px 0;
+}
+.lianxi li:nth-child(1) {
+	background: url(../images/icon.gif) no-repeat 0 0;
+}
+.lianxi li:nth-child(2) {
+	background: url(../images/icon.gif) no-repeat 0 -30px;
+}
+.lianxi li:nth-child(3) {
+	background: url(../images/icon.gif) no-repeat 0 -60px;
+}
+.lianxi li:nth-child(4) {
+	background: url(../images/icon.gif) no-repeat 0 -90px;
+}
+/*contact over*/
+
+/*footer start*/
+.footer {
+	height: 40px;
+	background-color: #EBEBEB;
+	padding: 40px;
+}
+.footer p {
+	color: #999999;
+	text-align: center;
+}
+/*footer end*/
